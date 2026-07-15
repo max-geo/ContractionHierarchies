@@ -1,6 +1,6 @@
 # Contraction Hierarchies: Top-Down vs. Bottom-Up Node Ordering
 
-An implementation and experimental comparison of two node-ordering heuristics for **Contraction Hierarchies (CH)** — a preprocessing technique that speeds up shortest-path queries on large road networks by several orders of magnitude.
+An implementation and experimental comparison of two node-ordering heuristics for **Contraction Hierarchies (CH)**: a preprocessing technique that speeds up shortest-path queries on large road networks by several orders of magnitude.
 
 Built for the Algorithms Engineering course at TU Eindhoven.
 
@@ -24,9 +24,7 @@ Evaluated on a randomly generated graph of 1,000 nodes / 2,000 edges, with 100 r
 | Avg. preprocessing time | ~280 ms | ~85 ms (~3× faster) |
 | Avg. query time | ~8,300 ns | ~8,900 ns |
 
-**Takeaway:** top-down wins decisively on preprocessing speed, since it skips dynamic re-scoring and priority-queue maintenance entirely. Bottom-up trades that speed for a slightly more compact hierarchy, yielding marginally faster queries. In other words — top-down is preferable when the graph changes often or preprocessing time is constrained; bottom-up is preferable for static networks with high query volume, where preprocessing happens once but queries run many times.
-
-Full methodology, hypotheses, and discussion are in [`Contraction_Hierarchies_Heuristics_Report_Final.pdf`](./Contraction_Hierarchies_Heuristics_Report_Final.pdf).
+**Takeaway:** top-down wins decisively on preprocessing speed, since it skips dynamic re-scoring and priority-queue maintenance entirely. Bottom-up trades that speed for a slightly more compact hierarchy, yielding marginally faster queries. In other words, top-down is preferable when the graph changes often or preprocessing time is constrained; bottom-up is preferable for static networks with high query volume, where preprocessing happens once but queries run many times.
 
 ## Getting Started
 
@@ -74,7 +72,13 @@ cd src
 # Run the test suite
 ./bld_tst/test_experiment.exe
 ```
+## Tools
 
+- **Language:** C++
+- **Build system:** Make (via `make build` / `make clean`)
+- **Testing:** GoogleTest
+- **Dev environment:** WSL (Windows Subsystem for Linux)
+  
 ## Team
 
 - Maximilian Luca Georgescu
@@ -85,6 +89,7 @@ cd src
 TU Eindhoven, Algorithms Engineering
 
 ## References
-
-- Contraction Hierarchies: An Illustrative Guide
+[
+- Contraction Hierarchies: An Illustrative Guide](https://jlazarsfeld.github.io/ch.150.project/sections/13-summary/)
+- [https://github.com/RoutingKit/RoutingKit/blob/master/src/contraction_hierarchy.cpp]
 - [Wikipedia: Contraction Hierarchies](https://en.wikipedia.org/wiki/Contraction_hierarchies)
