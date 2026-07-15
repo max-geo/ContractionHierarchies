@@ -89,7 +89,6 @@ cd src
 TU Eindhoven, Algorithms Engineering
 
 ## References
-[
 - Contraction Hierarchies: An Illustrative Guide](https://jlazarsfeld.github.io/ch.150.project/sections/13-summary/)
 - [https://github.com/RoutingKit/RoutingKit/blob/master/src/contraction_hierarchy.cpp]
 - [Wikipedia: Contraction Hierarchies](https://en.wikipedia.org/wiki/Contraction_hierarchies)
